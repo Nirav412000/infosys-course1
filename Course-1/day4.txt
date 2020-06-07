@@ -1,0 +1,71 @@
+#PF-Exer-22
+
+def generate_ticket(airline,source,destination,no_of_passengers):
+    ticket_number_list=[]
+    
+    if(no_of_passengers>5):
+        num=100
+        num=num+no_of_passengers-4
+        for i in range(num,num+5):
+            s=airline+":"+source[0:3]+":"+destination[0:3]+":"+str(i)
+            ticket_number_list.append(s)
+    else:
+        num=100
+        for i in range(1,no_of_passengers+1):
+            num=num+i
+            s=airline+":"+source[0:3]+":"+destination[0:3]+":"+str(i)
+            ticket_number_list.append(s)
+    return ticket_number_list
+
+#Provide different values for airline,source,destination,no_of_passengers and test your program
+print(generate_ticket("AI","Bangalore","London",7))
+
+
+#PF-Exer-23
+def translate(bilingual_dict,english_words_list):
+    swedish_words_list=[]
+    for word in english_words_list:
+        for key,value in bilingual_dict.items():
+            if(key==word):
+                swedish_words_list.append(value)
+                break
+
+    return swedish_words_list
+
+
+bilingual_dict= {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"ar"}
+english_words_list=["merry","christmas"]
+print("The bilingual dict is:",bilingual_dict)
+print("The english words are:",english_words_list)
+
+swedish_words_list=translate(bilingual_dict, english_words_list)
+print("The equivalent swedish words are:",swedish_words_list)
+
+
+//PF-Exer-24
+//This verification is based on string match.
+
+package main
+
+import ("fmt")
+func main() {
+    var x int = find_square(3);
+    fmt.Println(x);
+}
+func find_square(x int) int {
+    x=x*x;
+    return x;
+}
+
+
+//JS-Exer-25
+
+function find_sum(x){
+    x=(x*(x+1))/2
+    return x
+}
+
+console.log(find_sum(6))
+
+
+
