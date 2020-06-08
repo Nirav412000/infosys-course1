@@ -1,0 +1,41 @@
+Quiz 33  Zero Division Error Occure
+Quiz 34 value Error  finally done
+Quiz 35 Function Name error    sum Finally    invocation finally  
+
+#PF-Exer-30
+
+def find_average(mark_list):
+	total=0
+	for i in range(0, len(mark_list)):
+		total+=mark_list[i]
+	marks_avg=total/len(mark_list)
+	return marks_avg
+
+m_list=[1,2,3,4]
+print("Average marks:", find_average(m_list))
+
+quiz 36  240
+
+
+#PF-Exer-32
+
+def human_pyramid(no_of_people):
+    if(no_of_people==1):
+        return 50
+    else:
+        return no_of_people*(50)+human_pyramid(no_of_people-2)
+
+def find_maximum_people(max_weight):
+    no_of_people=0
+    i=1
+    weight=50
+    while(weight<=max_weight):
+        no_of_people=i
+        i=i+2
+        weight=human_pyramid(i)
+        
+    return no_of_people
+
+#Provide different values for max_weight and test your program
+max_people=find_maximum_people(1000)
+print(max_people)

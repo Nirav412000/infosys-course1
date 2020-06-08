@@ -95,3 +95,48 @@ elif(transaction_type=="Balance Enquiry"):
     bal_inquiry(account_list,balance_list,amount,account_number)
 else:
     print("Invalid Transaction Type")
+	
+	
+#PF-Exer-28
+                                              
+#This method accepts the name of winner of each match of the day
+def find_winner_of_the_day(*match_tuple):
+    t1=0
+    t2=0
+    for team in match_tuple:
+        if(team=="Team1"):
+            t1+=1
+        else:
+            t2+=1
+    if(t1>t2):
+        return "Team1"
+    elif(t2>t1):
+        return "Team2"
+    else:
+        return "Tie"
+
+#Invoke the function with each of the print statements given below
+print(find_winner_of_the_day("Team1","Team2","Team2","Team1","Team2"))
+#print(find_winner_of_the_day("Team1","Team2","Team1","Team2"))
+
+
+
+#PF-Exer-29
+def merge_lists(list1,list2):
+    list1=list1+list2
+    return list1
+
+    
+def sort_list(merged_list):
+    n = len(merged_list) 
+    for i in range(n-1): 
+        for j in range(0, n-i-1): 
+            if merged_list[j] > merged_list[j+1] : 
+                merged_list[j], merged_list[j+1] = merged_list[j+1], merged_list[j]
+    return merged_list
+
+#Provide different values for list1 and list2 and test your program
+merged_list=merge_lists(list1=[1,2,3,4,1] ,list2=[2,3,4,5,4,6])
+print(merged_list)
+sorted_merged_list=sort_list(merged_list)
+print(sorted_merged_list)
